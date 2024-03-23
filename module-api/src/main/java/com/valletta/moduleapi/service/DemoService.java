@@ -5,6 +5,7 @@ import com.valletta.modulecommon.repository.MemberRepository;
 import com.valletta.modulecommon.service.CommonDemoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Slf4j
@@ -12,10 +13,15 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class DemoService {
 
+    @Value("${profile-name}")
+    private String profileName;
+
     private final CommonDemoService commonDemoService;
     private final MemberRepository memberRepository;
 
     public String save() {
+        log.info("# profileName: {}", profileName);
+        
         memberRepository.save(Member.builder()
 //            .name("테스트")
             .name(Thread.currentThread().getName())
