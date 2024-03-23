@@ -1,3 +1,5 @@
+profile-name: "local"
+
 spring:
   config:
     activate:

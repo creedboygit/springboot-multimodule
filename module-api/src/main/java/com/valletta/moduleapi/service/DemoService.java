@@ -21,7 +21,8 @@ public class DemoService {
 
     public String save() {
         log.info("# profileName: {}", profileName);
-        
+//        System.out.println("# profileName: " + profileName);
+
         memberRepository.save(Member.builder()
 //            .name("테스트")
             .name(Thread.currentThread().getName())
