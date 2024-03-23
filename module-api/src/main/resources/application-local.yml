@@ -6,14 +6,14 @@ spring:
     name: module-api
   main:
     allow-bean-definition-overriding: true
-  datasource:
+  datasource: # docker-compose? ???? DB ?? ??
     url: jdbc:mysql://127.0.0.1:3306/pass_local?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
     username: pass_local_user
     password: passlocal123
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     database: mysql
-    database-platform: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.MySQLDialect # ?? ?? ??
     open-in-view: false
     hibernate:
       ddl-auto: create
