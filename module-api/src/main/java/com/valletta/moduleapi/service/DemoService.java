@@ -3,7 +3,6 @@ package com.valletta.moduleapi.service;
 import com.valletta.modulecommon.enums.CodeEnum;
 import com.valletta.modulecommon.service.CommonDemoService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -20,5 +19,9 @@ public class DemoService {
 
     public String find() {
         return "find";
+    }
+
+    public String exception() {
+        return "exception";
     }
 }
