@@ -1,6 +1,7 @@
 package com.valletta.moduleapi.service;
 
 import com.valletta.modulecommon.domain.Member;
+import com.valletta.modulecommon.enums.CodeEnum;
 import com.valletta.modulecommon.repository.MemberRepository;
 import com.valletta.modulecommon.service.CommonDemoService;
 import lombok.RequiredArgsConstructor;
@@ -27,8 +28,8 @@ public class DemoService {
 //            .name("테스트")
             .name(Thread.currentThread().getName())
             .build());
-//        System.out.println(CodeEnum.SUCCESS.getCode());
-//        System.out.println(commonDemoService.commonService());
+        System.out.println(CodeEnum.SUCCESS.getCode());
+        System.out.println(commonDemoService.commonService());
         return "save";
     }
 
