@@ -40,6 +40,8 @@ tasks.named('test') {
 tasks.bootJar { enabled = false }
 tasks.jar { enabled = true }
 
+tasks.register("prepareKotlinBuildScriptModel") {}
+
 /*
 [참고]
 - root project에서 Gradle 빌드 명령어를 실행한다.
